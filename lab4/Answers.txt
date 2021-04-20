@@ -1,0 +1,33 @@
+QUESTION 8)
+
+Answer the following theoretical questions:
+a) How can you protect the credit card information in the database from hackers?
+b) Give three advantages of using stored procedures in the database (and thereby
+execute them on the server) instead of writing the same functions in the f
+ront-end of the system (in for example java-script on a web-page)?
+
+a) The credit card information could for example be hashed it would make the
+  information less vulnerable to hackers.
+b) 1. Better performance since it allow the usage of the computing power at the
+      server
+   2. It is easier to use since it provides an layer of abstraction.
+   3. It also reduces code redundancy as procedures and functions can be
+      called instead of doing the same operations over and over again.
+
+
+QUESTION 9)
+
+Open two MySQL sessions. We call one of them A and the other one B.
+Write START TRANSACTION; in both terminals.
+a)In session A, add a new reservation.
+b)Is this reservation visible in session B? Why? Why not?
+c)What happens if you try to modify the reservation from A in B?
+Explain what happens and why this happens and how this relates to the concept
+of isolation of transactions.
+
+a) OK result
+b) NO it is not, because it has not been committed to the database yet.
+c) It gets stuck waiting for  A to release the lock on the newly inserted
+    reservation row. This relates to the concept of isolation of transactions
+    in the way that it shows how different transactions cant modify the same data.
+ 
